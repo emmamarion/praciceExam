@@ -1,4 +1,87 @@
 body {
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    border: 2px, solid, rgb(1, 140, 1);
+    background-image: url("../images/bacon.JPG");
+    color: white;
+    font-size: 30px;
+    min-height: 300px;
+}
+
+
+h1, h2{
+    text-align: center;
+}
+
+h2 {
+    background-color: gray;
+}
+
+
+.outerdiv {
+    border: 5px, solid, rgb(185, 43, 43);
+    padding-bottom: 15px;
+}
+
+#test {
+    text-transform: uppercase;
+}
+
+.outerdiv div {
+    border: 1px, solid, black;
+    background-color: rgba(69, 220, 69, 0.25);
+}
+
+li {
+    list-style-type: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    width: 80%;
+}
+
+ol {
+    border: 10px solid gold;
+}
+
+/* 600px min width */
+@media screen and (min-width: 600px) {
+    header{
+        background-image: none;
+        font-size: 20px;
+        min-height: none;
+    }
+
+    h2 {
+        grid-column: 1/-1;
+    }
+    .outerdiv{
+        display: grid;
+        grid-template-columns: 40% 40%;
+    }
+    
+    ol{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .outerdiv div:hover {
+        text-transform: uppercase;
+        animation-name: outerdivAnimation;
+        animation-duration: 3s;
+
+    }
+
+    @keyframes outerdivAnimation {
+        from {background-color: rgba(69, 220, 69, 0.25);}
+        to {background-color: yellow};
+    }
+}
+
+/* 925px min width */
+@media screen and (min-width: 925px) {
+    
 }
